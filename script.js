@@ -1,13 +1,14 @@
 // --------------------- GENERACIÓN DE PRODUCTOS ---------------------
-const productos = Array.from({ length: 10 }, (_, i) => ({
+const productos = Array.from({ length: 60 }, (_, i) => ({
   id: i + 1,
   nombre: `Producto ${i + 1}`,
   descripcion: 'Descripción breve del producto.',
   categoria: ['Hombre', 'Mujer', 'Niños'][i % 3],
-  imagen: i === 0 ? 'imagen/imagen1.jpg' : `imagen/producto${i + 1}.jpg`,
+imagen: i < 10 
+  ? `imagen/producto${i + 1}.jpg` 
+  : `https://placehold.co/400x200?text=Producto+${i + 1}`,
   precio: (Math.random() * 50 + 10).toFixed(2)
 }));
-
 
 const productosPorPagina = 10;
 let paginaActual = 1;

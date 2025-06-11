@@ -29,9 +29,6 @@ const cerrarSesionBtn = document.getElementById('cerrarSesion');
 const mensajeBienvenida = document.getElementById('mensajeBienvenida');
 const btnIrCatalogo = document.getElementById('btnIrCatalogo');
 
-// --------------------- FILTROS ---------------------git add .
-git commit -m "Actualización pequeña del contenido"
-git push origin main
 
 function filtrarProductos() {
   return productos.filter(p => {
